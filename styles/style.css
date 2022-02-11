@@ -8,24 +8,367 @@
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
+* {
+  /* outline: 1px solid #FF0000; */
+}
+
+.content {
+
+}
 
 .header {
+  display: flex;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  /* выше установили ограничения для секции */
+  background-color: #f2f2f2;
+  position: relative;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.logo_place_header {
+  width: 183px;
+  height: 32px;
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  z-index: 3;
+}
+
+.header__title {
+  width: 730px;
+  font-size: 102px;
+  line-height: 96px;
+  font-weight: bold;
+  align-self: center;
+  position: relative;
+  left: 64px;
+  margin: 0;
+}
+
+.header__subtitle {
+  width: 388px;
+  line-height: 25px;
+  font-size: 18px;
+  position: absolute;
+  left: 64px;
+  bottom: 30px;
+  z-index: 3;
+  font-weight: normal;
+  margin: 0;
+}
+
+.header__link {
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+.header__main-illustration {
+  width: 765px;
+  height: 608px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+}
+
 .header__square-pic {
   height: 568px;
   width: 568px;
+  background-color: #2f80ed;
+  position: absolute;
+  top: 64px;
+  right: 0px;
+  z-index: 1;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+.description {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 100px 0px;
+}
+
+.two-columns {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.two-columns__brief {
+  line-height: 1.2;
+  font-size: 18px;
+  color: #2f80ed;
+  width: 175px;
+}
+
+.two-columns__main-text {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 80%;
+  min-width: 784px;
+  gap: 30px;
+}
+
+.two-columns__paragraph {
+  line-height: 34px;
+  font-size: 24px;
+}
+
+.two-columns__span-accent {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.digits {
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  max-height: 756px;
+  align-items: center;
+  padding: 100px 0px;
+}
+
+.section-title {
+  width: 60%;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  width: 60%;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+}
+
+.table {
+  width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 60px;
+  padding-top: 60px;
+}
+
+.table__cell {
+  display: flex;
+  width: 250px;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.table__heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table__text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.feynman {
+  height: 890px;
+  background-color: #f2f2f2;
+  background-image: url(../images/feynman.png);
+  background-size: 867px 637px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  padding-top: 100px;
+  position: relative;
+  z-index: -3;
+}
+
+.feynman__title {
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: bold;
+  width: 648px;
+  margin: 0;
+  text-align: center;
+}
+
+.feynman__subtitle {
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.feynman__link {
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  color: #2f80ed;
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  text-decoration: none;
+}
+
+
+.kaufman {
+  background-color: #1f1f1f;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 90px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.section-title_theme_dark {
+  color: white;
+  width: 60%;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.section-subtitle_theme_dark {
+  color: white;
+  width: 60%;
+  text-align: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.table__theme_dark {
+  width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 60px;
+  z-index: 2;
+}
+
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+}
+
+.table__heading_theme_dark {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table__text_theme_dark {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.kaufman__triangle {
+  position: absolute;
+  right: -210px;
+  z-index: 1;
+  height: 877px;
+  width: 877px;
+}
+
+.footer {
+  display: flex;
+  min-height: 350px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  color: white;
+  background-color: #1f1f1f;
+  justify-content: center;
+}
+
+.footer__columns {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__column_content_copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 711px;
+
+}
+
+.logo_place_footer {
+  width: 183px;
+  height: 35px;
+
+}
+
+.footer__autor {
+  margin: 18 0;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.footer__column_content_info {
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px;
+  margin: 16px;
+}
+
+.footer__column_content_social {
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px;
+  margin: 16px;
+}
+
+.footer__column_heading {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer__column_link {
+  color: white;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+.footer__column_links {
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+
+}
+
+.footer__social_icon {
+  width: 16px;
+  height: 16px;
 }
