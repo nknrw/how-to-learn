@@ -1,0 +1,12 @@
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    to {
+        transform: rotate(360deg);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+  } 
